@@ -147,4 +147,4 @@ Rồi mở trình duyệt vào: `http://127.0.0.1:5500`
 - Phân trang danh sách công việc (thêm tham số `limit`, `offset` ở `GET /tasks`)
 - Viết Unit Test cho các endpoint bằng `pytest` + `TestClient` của FastAPI
 - Đóng gói bằng Docker (Dockerfile cho backend + docker-compose kèm PostgreSQL)
-- Triển khai backend lên Render/Railway, frontend lên Vercel/Netlify
+
