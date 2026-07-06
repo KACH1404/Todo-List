@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý công việc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Todo List </h2>
+
+    <div class="input-group">
+        <input type="text" id="taskInput" placeholder="Nhập công việc mới...">
+        <button onclick="addTask()">Thêm</button>
+    </div>
+
+    <div class="filter-group">
+        <input type="text" id="searchInput" placeholder="Tìm kiếm công việc..." oninput="loadTasks()">
+        <select id="statusFilter" onchange="loadTasks()">
+            <option value="all">Tất cả</option>
+            <option value="active">Chưa hoàn thành</option>
+            <option value="completed">Đã hoàn thành</option>
+        </select>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <!-- Toàn bộ logic gọi API nằm trong app.js -->
+    <script src="app.js"></script>
+</body>
+</html>

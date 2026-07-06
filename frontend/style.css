@@ -1,0 +1,127 @@
+* { 
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family: Arial, sans-serif; 
+    width: 90%; 
+    max-width: 500px; 
+    margin: 30px auto; 
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h2 { 
+    text-align: center; 
+    color: #333; 
+}
+
+.input-group, .filter-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Định dạng cho thanh tìm kiếm và ô chọn trạng thái */
+.filter-group input[type="text"] {
+    flex: 2;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.filter-group select {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+}
+
+input[type="text"] {
+    flex: 1; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover { 
+    background-color: #218838; 
+}
+
+.edit-btn {
+    background-color: #ffc107;
+    color: #212529;
+}
+.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}
+.delete-btn:hover {
+    background-color: #bd2130;
+}
+
+ul { 
+    list-style-type: none; 
+    padding: 0; 
+}
+
+li { 
+    margin: 10px 0; 
+    padding: 10px;
+    background: white;
+    border-radius: 4px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.task-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 5px;
+}
+
+.completed { 
+    text-decoration: line-through; 
+    color: gray; 
+}
+
+/* Hiển thị khi danh sách rỗng hoặc mất kết nối server */
+.empty-state {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    justify-content: center;
+    box-shadow: none;
+}
+
+/* Giao diện Responsive */
+@media (max-width: 480px) {
+    .input-group, .filter-group {
+        flex-direction: column; 
+    }
+    button, .filter-group select { 
+        width: 100%; 
+    }
+}
